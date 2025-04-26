@@ -7,6 +7,7 @@ import autoprefixer from 'autoprefixer';
 export default defineConfig({
   base: '/Portfolio/', // Replace 'Portfolio' with your repository name
   plugins: [react()],
+  base: './',
   css: {
     postcss: {
       plugins: [tailwindcss(), autoprefixer()],
