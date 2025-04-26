@@ -26,7 +26,6 @@ function App() {
     <WhyWorkWithMe/>
     <ProjectsSection/>
     <GetInTouch/>
-    <ContactPage/>
     <FooterPage/>
     </>
   )
