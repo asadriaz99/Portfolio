@@ -20,12 +20,12 @@ const projects = [
   },
   {
     id: 3,
-    title: "Travel Website",
+    title: "MediPlus Website",
     image: IMG3,
   },
   {
     id: 4,
-    title: "MediPlus Website",
+    title: "Travel Website",
     image: IMG4,
   },
   {
