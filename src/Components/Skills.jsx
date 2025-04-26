@@ -66,7 +66,7 @@ function SkillsPage() {
 
   return (
     <motion.section
-      className="min-h-screen bg-transparent text-white py-20 px-4 sm:px-8"
+      className="min-h-screen bg-transparent text-black py-20 px-4 sm:px-8"
       id="skills"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -82,12 +82,12 @@ function SkillsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="w-3 h-3 bg-pink-500 rounded-full mr-2"></div>
-            <span className="text-sm font-medium tracking-wider">
+            <div className="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
+            <span className="text-sm text-white font-medium tracking-wider">
               SKILLS & TOOLS
             </span>
           </motion.div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent animate-pulse text-center md:text-left leading-tight">
+          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 bg-gradient-to-r from-white via-white to-white bg-clip-text text-transparent animate-pulse text-center md:text-left leading-tight">
             Skills & Expertise
           </h1>
         </header>
@@ -99,11 +99,11 @@ function SkillsPage() {
             return (
               <motion.div
                 key={index}
-                className="bg-purple-900 bg-opacity-100 p-6 rounded-2xl shadow-md hover:shadow-purple-400/30 transition-all duration-300"
+                className="bg-white bg-opacity-100 p-6 rounded-2xl shadow-md hover:shadow-white transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
               >
                 <div className="flex items-center mb-6">
-                  <Icon className="w-6 h-6 mr-2 text-purple-400" />
+                  <Icon className="w-6 h-6 mr-2 text-black" />
                   <h2 className="text-2xl font-semibold">{category.name}</h2>
                 </div>
                 <ul className="space-y-4">
@@ -111,7 +111,7 @@ function SkillsPage() {
                     category.skills.map((skill, i) =>
                       typeof skill === "string" ? (
                         <li key={i} className="flex items-center">
-                          <ChevronRight className="w-4 h-4 mr-2 text-purple-400" />
+                          <ChevronRight className="w-4 h-4 mr-2 text-black" />
                           <span>{skill}</span>
                         </li>
                       ) : (
@@ -120,9 +120,9 @@ function SkillsPage() {
                             <span>{skill.name}</span>
                             <span>{skill.proficiency}%</span>
                           </div>
-                          <div className="w-full bg-purple-200 rounded-full h-2.5">
+                          <div className="w-full bg-black rounded-full h-2.5">
                             <motion.div
-                              className="bg-purple-600 h-2.5 rounded-full"
+                              className="bg-blue-600 h-2.5 rounded-full"
                               initial={{ width: 0 }}
                               animate={{ width: `${skill.proficiency}%` }}
                               transition={{ duration: 1 }}
@@ -142,7 +142,7 @@ function SkillsPage() {
 
         {/* Top Tools Section */}
         <div className="mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent animate-pulse text-center md:text-left">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-8 bg-gradient-to-r from-white via-white to-white bg-clip-text text-transparent animate-pulse text-center md:text-left">
             Top Tools
           </h2>
           <div className="flex flex-wrap justify-center md:justify-start gap-6">
@@ -151,7 +151,7 @@ function SkillsPage() {
               return (
                 <motion.div
                   key={index}
-                  className="rounded-full bg-purple-800 bg-opacity-90 p-2 shadow-lg"
+                  className="rounded-full bg-blue-800 bg-opacity-90 p-2 shadow-lg"
                   style={{
                     width: `${size}px`,
                     height: `${size}px`,

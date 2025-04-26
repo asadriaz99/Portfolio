@@ -27,13 +27,13 @@ export default function ProjectsSection() {
       <div className="container px-14 mx-auto py-12 sm:py-16">
         {/* Top Label */}
         <div className="flex items-center mb-6">
-          <div className="w-3 h-3 bg-pink-500 rounded-full inline-flex mr-2"></div>
+          <div className="w-3 h-3 bg-blue-500 rounded-full inline-flex mr-2"></div>
           <span className="text-sm sm:text-base font-medium">MY PROJECTS</span>
         </div>
 
         {/* Header */}
         <motion.header className="text-left mb-12 sm:mb-16">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent animate-pulse">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl py-8 font-bold leading-tight mb-4 bg-gradient-to-r from-white via-white to-white bg-clip-text text-transparent animate-pulse">
             Elevating Brands with <br className="hidden sm:block" /> Design Brilliance
           </h1>
         </motion.header>
@@ -50,7 +50,8 @@ export default function ProjectsSection() {
                 exit={{ opacity: 0, y: 30 }}
                 transition={{ duration: 0.5 }}
                 whileHover={{ scale: 1.05 }}
-                className="rounded-xl overflow-hidden shadow-lg relative border border-purple-600 hover:shadow-[0_0_40px_rgba(168,85,247,0.9)] transition-all duration-300 ease-in-out"
+                className="rounded-xl overflow-hidden shadow-lg relative border border-blue-500 hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300 ease-in-out"
+
               >
                 {/* Top Labels */}
                 <div className="absolute top-3 left-3 text-xs sm:text-sm font-medium text-white">
@@ -79,7 +80,7 @@ export default function ProjectsSection() {
             href="https://www.behance.net/asadriaz17"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-full shadow-md hover:shadow-lg transition duration-300 text-sm sm:text-base"
+            className="bg-white hover:bg-blue-700 text-black font-semibold py-3 px-6 rounded-full shadow-md hover:shadow-lg transition duration-300 text-sm sm:text-base"
           >
             Load More
           </a>

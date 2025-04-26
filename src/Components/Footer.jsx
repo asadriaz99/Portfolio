@@ -24,11 +24,11 @@ const FooterPage = () => {
 
   return (
     <div>
-      <footer className="bg-purple-500 text-white py-10">
-        <div className="container mx-auto px-6">
+      <footer className="bg-white text-black py-10">
+        <div className="container text-black mx-auto px-6">
 
           {/* Divider */}
-          <div className="w-32 h-px mx-auto bg-gradient-to-r from-transparent via-purple-500 to-transparent mb-6"></div>
+          <div className="w-32 h-px mx-auto bg-gradient-to-r from-transparent via-black to-transparent mb-6"></div>
 
           {/* Call to Action */}
           <p className="text-lg mb-6 text-center">
@@ -41,7 +41,7 @@ const FooterPage = () => {
               <motion.a
                 key={index}
                 href={href}
-                className="text-white hover:text-purple-400 transition-colors"
+                className="text-black hover:text-blue-400 transition-colors"
                 whileHover={{ scale: 1.2, rotate: 5 }}
                 title={label}
                 target="_blank"
@@ -58,7 +58,7 @@ const FooterPage = () => {
               to="about"
               smooth={true}
               duration={500}
-              className="hover:text-purple-400 transition-colors cursor-pointer mb-2 sm:mb-0"
+              className="hover:text-blue-400 transition-colors cursor-pointer mb-2 sm:mb-0"
             >
               About
             </Link>
@@ -66,7 +66,7 @@ const FooterPage = () => {
               to="skills"
               smooth={true}
               duration={500}
-              className="hover:text-purple-400 transition-colors cursor-pointer mb-2 sm:mb-0"
+              className="hover:text-blue-400 transition-colors cursor-pointer mb-2 sm:mb-0"
             >
               Skills
             </Link>
@@ -74,7 +74,7 @@ const FooterPage = () => {
               to="projects"
               smooth={true}
               duration={500}
-              className="hover:text-purple-400 transition-colors cursor-pointer mb-2 sm:mb-0"
+              className="hover:text-blue-400 transition-colors cursor-pointer mb-2 sm:mb-0"
             >
               Projects
             </Link>
@@ -89,7 +89,7 @@ const FooterPage = () => {
           </div>
 
           {/* Copyright */}
-          <p className="text-xs text-white text-center">
+          <p className="text-xs text-black text-center">
             &copy; {new Date().getFullYear()} Asad Riaz 99. All Rights Reserved.
           </p>
         </div>

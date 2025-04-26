@@ -41,12 +41,12 @@ function CreativeWorkflow() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="w-3 h-3 bg-pink-500 rounded-full mr-2"></div>
+            <div className="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
             <span className="text-sm sm:text-base font-medium">MY PROCESS</span>
           </motion.div>
 
           <motion.h1 
-            className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent animate-pulse leading-tight"
+            className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-white to-white bg-clip-text text-transparent animate-pulse leading-tight"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}

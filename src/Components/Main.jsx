@@ -51,7 +51,7 @@ export default function Main() {
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-16 items-center">
         {/* Animated Text Section */}
         <motion.div
-          className="bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent animate-pulse space-y-8 text-left"
+          className="bg-gradient-to-r from-white via-blck to-white bg-clip-text text-transparent animate-pulse space-y-8 text-left"
           variants={textVariants}
         >
           <motion.h1
@@ -60,7 +60,7 @@ export default function Main() {
           >
             <h1 className="text-9xl">Hi.</h1>I am{" "}
             <span className="italic font-serif">Asad Riaz</span>
-            <div className="w-3 h-3 bg-pink-500 rounded-full mr-2 inline-flex"></div>
+            <div className="w-3 h-3 bg-blue-500 rounded-full mr-2 inline-flex"></div>
             <span className="text-sm text-white font-medium">
               A BIT ABOUT ME
             </span>
@@ -80,7 +80,7 @@ export default function Main() {
             alt="Profile"
             className="rounded-[180px] pt-8 w-82 h-230 object-cover"
             style={{
-              boxShadow: "5px 5px 5px 5px rgba(168, 85, 247, 0.7)",
+              boxShadow: "5px 5px 5px 5px rgba(0000, 0000, 000, 0.7)",
               rotateX: rotate.x,
               rotateY: rotate.y,
             }}

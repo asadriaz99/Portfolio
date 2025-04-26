@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-purple-500 shadow-lg" : "bg-transparent"
+        isScrolled ? "bg-white shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
@@ -29,8 +29,8 @@ const Navbar = () => {
           <a
             href="/"
             className={`transition-colors ${
-              isScrolled ? "text-white" : "text-pink-500"
-            } hover:text-pink-300`}
+              isScrolled ? "text-black" : "text-white-500"
+            } hover:text-gray-200`}
           >
             Asad.
           </a>
@@ -57,8 +57,8 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             className={`transition-colors font-semibold ${
-              isScrolled ? "text-white" : "text-pink-500"
-            } hover:text-pink-300`}
+              isScrolled ? "text-black" : "text-white"
+            } hover:text-gray-200`}
           >
             About
           </Link>
@@ -67,8 +67,8 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             className={`transition-colors font-semibold ${
-              isScrolled ? "text-white" : "text-pink-500"
-            } hover:text-pink-300`}
+              isScrolled ? "text-black" : "text-white"
+            } hover:text-gray-200`}
           >
             Skills
           </Link>
@@ -77,8 +77,8 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             className={`transition-colors font-semibold ${
-              isScrolled ? "text-white" : "text-pink-500"
-            } hover:text-pink-300`}
+              isScrolled ? "text-black" : "text-white"
+            } hover:text-gray-200`}
           >
             Projects
           </Link>
@@ -87,8 +87,8 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             className={`transition-colors font-semibold ${
-              isScrolled ? "text-white" : "text-pink-500"
-            } hover:text-pink-300`}
+              isScrolled ? "text-black" : "text-white"
+            } hover:text-gray-200`}
           >
             Contact
           </Link>
@@ -106,7 +106,7 @@ const Navbar = () => {
               href={href}
               className={`${
                 isScrolled ? "text-black" : "text-white"
-              } hover:text-purple-500 transition-colors`}
+              } hover:text-gray-200 transition-colors`}
               whileHover={{ scale: 1.2 }}
               target="_blank"
               rel="noopener noreferrer"

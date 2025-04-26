@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    @apply bg-gradient-to-br from-black via-purple-900 to-black text-white;
+    @apply bg-gradient-to-br from-black via-black to-black text-white;
     min-height: 100vh;
     overflow-x: hidden;
   }

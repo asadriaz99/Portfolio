@@ -15,7 +15,7 @@ function MyJourney() {
         {/* Section Header */}
         <div className="mb-16">
           <div className="flex items-center mb-4 justify-center md:justify-start">
-            <div className="w-3 h-3 bg-pink-500 rounded-full mr-2"></div>
+            <div className="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
             <span className="text-sm text-white font-medium uppercase tracking-wider">
               DEVELOPMENT JOURNEY
             </span>
@@ -23,13 +23,13 @@ function MyJourney() {
           <h1 className="text-3xl sm:text-5xl font-extrabold leading-tight mb-6 text-center md:text-left">
             I am also an enthusiastic web developer based in Karachi, Pakistan, with over 2 years of rich experience in website & product design.
           </h1>
-          <h2 className="text-2xl sm:text-3xl font-bold text-pink-400 mb-6 text-center md:text-left">
+          <h2 className="text-2xl sm:text-3xl font-bold text-blue-500 mb-6 text-center md:text-left">
             I design professional & <br className="sm:hidden" /> beautiful websites
           </h2>
         </div>
 
         {/* Paragraphs */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-gray-300 text-base leading-relaxed">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-white text-base leading-relaxed">
           <p>
             With years of experience in graphic and web design, I have mastered the skills of understanding client requirements according to the latest trends. I have worked with businesses from different niches while freelancing, so you can rely on me for yours.
           </p>

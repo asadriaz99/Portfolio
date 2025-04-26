@@ -15,13 +15,13 @@ export default function GetInTouch() {
 
         {/* Pink Dot and Label */}
         <div className="mb-4 flex items-center justify-start">
-          <div className="w-3 h-3 bg-pink-500 rounded-full mr-2"></div>
+          <div className="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
           <span className="text-sm font-medium">GET IN TOUCH</span>
         </div>
 
         {/* Header */}
         <motion.h1
-          className="text-4xl py-8 sm:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent animate-pulse" // Adjust header size for small screens
+          className="text-4xl py-8 sm:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-white via-white to-white bg-clip-text text-transparent animate-pulse" // Adjust header size for small screens
         >
           Let's Work Together!
         </motion.h1>
@@ -34,7 +34,7 @@ export default function GetInTouch() {
         <div className="space-y-4">
           <a
             href="mailto:asadriaz88218821@gmail.com"
-            className="inline-block bg-purple-600 hover:bg-purple-700 transition px-6 py-3 rounded-full text-white font-medium w-full sm:w-auto" // Make button full-width on small devices
+            className="inline-block bg-white hover:bg-blue-700 transition px-6 py-3 rounded-full text-black font-medium w-full sm:w-auto" // Make button full-width on small devices
           >
             Send an Email
           </a>
@@ -43,7 +43,7 @@ export default function GetInTouch() {
             href="https://wa.me/03272334177"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 bg-purple-600 hover:bg-green-600 transition px-6 py-3 rounded-full text-white font-medium w-full sm:w-auto" // Make button full-width on small devices
+            className="inline-flex items-center space-x-2 bg-white hover:bg-green-600 transition px-6 py-3 rounded-full text-black font-medium w-full sm:w-auto" // Make button full-width on small devices
           >
             <FaWhatsapp size={20} />
             <span>Chat on WhatsApp</span>
