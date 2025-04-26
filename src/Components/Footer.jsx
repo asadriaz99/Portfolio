@@ -7,17 +7,17 @@ const FooterPage = () => {
   const socialLinks = [
     {
       Icon: FaGithub,
-      href: "https://github.com/AlishbaZ21",
+      href: "https://github.com/asadriaz99",
       label: "Github",
     },
     {
       Icon: FaLinkedin,
-      href: "https://www.linkedin.com/in/alishba-shahid-137399313/",
+      href: "www.linkedin.com/in/asad-riaz-294401264",
       label: "LinkedIn",
     },
     {
       Icon: FaEnvelope,
-      href: "mailto:lishayshahid.bahrian@gmail.com",
+      href: "mailto:asadriaz88218821@gmail.com",
       label: "Email",
     },
   ];
@@ -89,7 +89,7 @@ const FooterPage = () => {
 
           {/* Copyright */}
           <p className="text-xs text-white">
-            &copy; {new Date().getFullYear()} Lishay Creates. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Asad Riaz 99. All Rights Reserved.
           </p>
         </div>
       </footer>

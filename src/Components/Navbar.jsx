@@ -28,10 +28,10 @@ const Navbar = () => {
           <a
             href="/"
             className={`transition-colors ${
-              isScrolled ? "text-white" : "text-purple-400"
-            } hover:text-pink-400`}
+              isScrolled ? "text-white" : "text-pink-500"
+            } hover:text-pink-300`}
           >
-            Portfolio
+            Asad.
           </a>
         </div>
 
@@ -42,8 +42,8 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             className={`transition-colors font-semibold ${
-              isScrolled ? "text-white" : "text-purple-400"
-            } hover:text-pink-400`}
+              isScrolled ? "text-white" : "text-pink-500"
+            } hover:text-pink-300`}
           >
             About
           </Link>
@@ -52,8 +52,8 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             className={`transition-colors font-semibold ${
-              isScrolled ? "text-white" : "text-purple-400"
-            } hover:text-pink-400`}
+              isScrolled ? "text-white" : "text-pink-500"
+            } hover:text-pink-300`}
           >
             Skills
           </Link>
@@ -62,8 +62,8 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             className={`transition-colors font-semibold ${
-              isScrolled ? "text-white" : "text-purple-400"
-            } hover:text-pink-400`}
+              isScrolled ? "text-white" : "text-pink-500"
+            } hover:text-pink-300`}
           >
             Projects
           </Link>
@@ -72,8 +72,8 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             className={`transition-colors font-semibold ${
-              isScrolled ? "text-white" : "text-purple-400"
-            } hover:text-pink-400`}
+              isScrolled ? "text-white" : "text-pink-500"
+            } hover:text-pink-300`}
           >
             Contact
           </Link>

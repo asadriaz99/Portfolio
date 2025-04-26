@@ -5,6 +5,11 @@ import Navbar from "./Components/Navbar"
 import ProjectsSection from "./Components/Projects"
 import SkillsPage from "./Components/Skills"
 import ContactPage from "./Components/Contact"
+import WhyWorkWithMe from "./Components/WhyWorkWithMe"
+import AccentBackground from "./Components/AccentBackground"
+import CreativeWorkflow from "./Components/CreativeWorkflow"
+import MyJourney from "./Components/MyJourney"
+import GetInTouch from "./Components/GetInTouch"
 
 
 function App() {
@@ -12,10 +17,15 @@ function App() {
 
   return (
     <>
+    <AccentBackground/>
     <Navbar/>
     <Main/>
+    <MyJourney/>
     <SkillsPage/>
+    <CreativeWorkflow/>
+    <WhyWorkWithMe/>
     <ProjectsSection/>
+    <GetInTouch/>
     <ContactPage/>
     <FooterPage/>
     </>

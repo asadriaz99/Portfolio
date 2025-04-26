@@ -1,167 +1,107 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import IMG1 from '../assets/anirec.png'
-import IMG2 from '../assets/crs.png'
-import IMG3 from '../assets/SQL.png'
-import IMG4 from '../assets/logo.png'
-import IMG5 from '../assets/infog.png'
-import IMG6 from '../assets/landingpage.png'
+import IMG1 from "../Projects/P1.png";
+import IMG2 from "../Projects/P2.png";
+import IMG3 from "../Projects/P3.png";
+import IMG4 from "../Projects/P4.png";
+import IMG5 from "../Projects/P5.png";
+import IMG6 from "../Projects/P6.png";
 
 const projects = [
   {
     id: 1,
-    title: "Recommendation Website",
-    description: "A Nest and Node JS Mini Project",
-    category: "WEBSITES",
-    image: IMG1
+    title: "Signify App",
+    image: IMG1,
   },
   {
     id: 2,
-    title: "Car Rental System",
-    description: "Java and SQL Based",
-    category: "JAVA",
+    title: "TailTreats Website",
     image: IMG2,
   },
   {
     id: 3,
-    title: "ERD AND DATBASES",
-    description: "Database ERD",
-    category: "SQL",
+    title: "Travel Website",
     image: IMG3,
   },
   {
     id: 4,
-    title: "Logo Designs",
-    description: "Modern and Elegant Logo's for companies",
-    category: "GRAPHIC DESIGN",
+    title: "MediPlus Website",
     image: IMG4,
   },
   {
     id: 5,
-    title: "Infographics",
-    description: "Modern Infographics and Posters",
-    category: "GRAPHIC DESIGN",
+    title: "Consolify Website",
     image: IMG5,
   },
   {
     id: 6,
     title: "Agency Landing Page",
-    description: "Agency Landing Pages Using Figma",
-    category: "UI/UX",
     image: IMG6,
   },
 ];
 
-const categories = ["All", "UI/UX", "WEBSITES", "GRAPHIC DESIGN", "JAVA"];
-
 export default function ProjectsSection() {
-  const [activeCategory, setActiveCategory] = useState("All");
-
-  const filteredProjects =
-    activeCategory === "All"
-      ? projects
-      : projects.filter((project) => project.category === activeCategory);
-
   return (
     <motion.div
-      className="min-h-screen bg-gradient-radial from-purple-900 via-black to-black text-white overflow-hidden relative"
+      className="min-h-screen text-white overflow-hidden"
       initial="hidden"
       animate="visible"
       id="projects"
     >
-      {/* Accent Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute bg-purple-500 rounded-full opacity-20"
-            style={{
-              width: `${Math.random() * 80 + 40}px`,
-              height: `${Math.random() * 80 + 40}px`,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              x: [0, Math.random() * 50 - 25],
-              y: [0, Math.random() * 50 - 25],
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: Math.random() * 15 + 10,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-          />
-        ))}
-      </div>
+      <div className="container mx-auto px-4 py-16">
+        <div className="w-3 h-3 bg-pink-500 rounded-full inline-flex mr-2"></div>
+        <span className="text-sm font-medium">MY PROJECTS</span>
 
-      <div className="container mx-auto px-4 py-16 relative z-10">
-        {/* Header Section */}
-        <motion.header className="text-center mb-16">
-          <motion.h1
-            className="text-5xl font-bold mb-4 text-purple-400"
-            animate={{ scale: [1, 1.05, 1] }}
-            transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
-          >
-            My Projects
-          </motion.h1>
-          <motion.div className="w-32 h-1 mx-auto bg-gradient-to-r from-transparent via-purple-500 to-transparent"></motion.div>
+        {/* Header */}
+        <motion.header className="text-left mb-16">
+          <h1 className="text-6xl font-bold leading-tight mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent animate-pulse">
+            Elevating Brands with <br /> Design Brilliance
+          </h1>
         </motion.header>
 
-        {/* Category Filter */}
-        <div className="flex justify-center space-x-4 mb-12">
-          {categories.map((category) => (
-            <motion.button
-              key={category}
-              className={`px-4 py-2 rounded-full ${
-                activeCategory === category ? "bg-purple-600" : "bg-purple-800"
-              } text-white font-semibold`}
-              whileHover={{
-                scale: 1.1,
-                boxShadow: "0 0 12px rgba(147, 51, 234, 0.5)",
-              }}
-              onClick={() => setActiveCategory(category)}
-            >
-              {category}
-            </motion.button>
-          ))}
-        </div>
-
-        {/* Projects Display Area */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Project Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <AnimatePresence>
-            {filteredProjects.map((project) => (
+            {projects.map((project) => (
               <motion.div
                 key={project.id}
                 layout
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 30 }}
                 transition={{ duration: 0.5 }}
-                className="relative group"
+                whileHover={{ scale: 1.05 }} // Zoom on hover
+                className="rounded-xl overflow-hidden shadow-lg relative border border-purple-600 hover:shadow-[0_0_40px_rgba(168,85,247,0.9)] transition-all duration-300 ease-in-out"
               >
-                <motion.div
-                  whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0 0 20px rgba(147, 51, 234, 0.5)",
-                  }}
-                  className="relative overflow-hidden rounded-lg bg-gray-900"
-                >
+                {/* Top Labels */}
+                <div className="absolute top-4 left-4 text-white text-sm font-medium">
+                  {project.title}
+                </div>
+                <div className="absolute top-4 right-4 text-white text-sm font-medium">
+                  AR99
+                </div>
+
+                {/* Project Image */}
+                <div className="w-full flex items-center justify-center overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-64 object-cover rounded-t-lg"
+                    className="object-contain w-full max-h-80"
                   />
-                  <div className="p-4 text-center">
-                    <h3 className="text-2xl font-bold mb-2 text-purple-400">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-300">{project.description}</p>
-                  </div>
-                </motion.div>
+                </div>
               </motion.div>
             ))}
           </AnimatePresence>
+        </div>
+        <div className="flex justify-center mt-10">
+          <a
+            href="https://www.behance.net/asadriaz17" // Replace with your actual Behance link
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-full shadow-md hover:shadow-lg transition duration-300"
+          >
+            Load More
+          </a>
         </div>
       </div>
     </motion.div>
