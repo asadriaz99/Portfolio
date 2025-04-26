@@ -21,7 +21,7 @@ const skillCategories = [
       { name: "HTML/CSS/JS", proficiency: 90 },
       { name: "SQL/MongoDB", proficiency: 65 },
       { name: "React", proficiency: 75 },
-      { name: "TAILWIND CSS", proficiency: 75 },
+      { name: "Tailwind CSS", proficiency: 75 },
     ],
   },
   {
@@ -61,49 +61,48 @@ const tools = [
 ];
 
 function SkillsPage() {
-  const [hoveredSkill, setHoveredSkill] = useState(null);
-
-  const randomSize = () => 40 + Math.random() * 60;
+  const randomSize = () => 60 + Math.random() * 60;
   const randomOffset = (range) => Math.random() * range * 2 - range;
 
   return (
-    <motion.div
-      className="min-h-screen text-white overflow-hidden relative"
+    <motion.section
+      className="min-h-screen bg-transparent text-white py-20 px-4 sm:px-8"
       id="skills"
-      initial="hidden"
-      animate="visible"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
     >
-      <div className="container mx-auto px-4 py-16 relative z-10">
-        {/* Header Section */}
+      <div className="max-w-6xl mx-auto w-full">
+
+        {/* Section Intro */}
         <header className="mb-16">
           <motion.div
-            className="inline-flex items-center mb-4"
+            className="flex items-center mb-4 justify-center md:justify-start"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
             <div className="w-3 h-3 bg-pink-500 rounded-full mr-2"></div>
-            <span className="text-sm font-medium">SKILLS & TOOLS</span>
+            <span className="text-sm font-medium tracking-wider">
+              SKILLS & TOOLS
+            </span>
           </motion.div>
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent animate-pulse text-left">
+          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent animate-pulse text-center md:text-left leading-tight">
             Skills & Expertise
           </h1>
         </header>
 
-        {/* Skills Display Layout */}
+        {/* Skills Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {skillCategories.map((category, index) => {
             const Icon = category.icon;
             return (
               <motion.div
                 key={index}
-                className="bg-purple-900 bg-opacity-100 p-6 rounded-lg"
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 0 20px rgba(147, 51, 234, 0.5)",
-                }}
+                className="bg-purple-900 bg-opacity-100 p-6 rounded-2xl shadow-md hover:shadow-purple-400/30 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
               >
-                <div className="flex items-center mb-4">
+                <div className="flex items-center mb-6">
                   <Icon className="w-6 h-6 mr-2 text-purple-400" />
                   <h2 className="text-2xl font-semibold">{category.name}</h2>
                 </div>
@@ -126,14 +125,14 @@ function SkillsPage() {
                               className="bg-purple-600 h-2.5 rounded-full"
                               initial={{ width: 0 }}
                               animate={{ width: `${skill.proficiency}%` }}
-                              transition={{ duration: 1, ease: "easeOut" }}
+                              transition={{ duration: 1 }}
                             />
                           </div>
                         </li>
                       )
                     )
                   ) : (
-                    <li>No skills available</li>
+                    <li>No skills listed</li>
                   )}
                 </ul>
               </motion.div>
@@ -141,20 +140,18 @@ function SkillsPage() {
           })}
         </div>
 
-        {/* Featured Tools Section */}
+        {/* Top Tools Section */}
         <div className="mb-16">
-          <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent animate-pulse text-left">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent animate-pulse text-center md:text-left">
             Top Tools
           </h2>
-
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center md:justify-start gap-6">
             {tools.map((tool, index) => {
-              // Increased base size range — now 60 to 100 instead of 40 to 100
-              const size = 60 + Math.random() * 60;
+              const size = randomSize();
               return (
                 <motion.div
                   key={index}
-                  className="rounded-full p-2 bg-purple-800 bg-opacity-90 shadow-lg"
+                  className="rounded-full bg-purple-800 bg-opacity-90 p-2 shadow-lg"
                   style={{
                     width: `${size}px`,
                     height: `${size}px`,
@@ -165,7 +162,7 @@ function SkillsPage() {
                     x: randomOffset(10),
                   }}
                   whileHover={{
-                    scale: 1.25, // increased zoom on hover
+                    scale: 1.2,
                     rotate: 0,
                     transition: { type: "spring", stiffness: 300 },
                   }}
@@ -180,8 +177,9 @@ function SkillsPage() {
             })}
           </div>
         </div>
+
       </div>
-    </motion.div>
+    </motion.section>
   );
 }
 

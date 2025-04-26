@@ -36,7 +36,7 @@ const AccentBackground = () => {
               scale: [1, 1.3, 1],
             }}
             transition={{
-              duration: Math.random() * 20 + 10,
+              duration: Math.random() * 15 + 5, // reduced duration for faster movement
               repeat: Infinity,
               repeatType: 'mirror',
               ease: 'easeInOut',

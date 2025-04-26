@@ -65,7 +65,7 @@ export default function Main() {
               A BIT ABOUT ME
             </span>
             <p className="font-light text-white text-base px-8">
-              I am a creative Graphic Designer and UI/UX specialist with a
+              I am a Innovative Graphic Designer and UI/UX specialist with a
               passion for crafting visually engaging and user-friendly digital
               experiences with 3 years of Experience in Design. With a keen eye
               for detail and design, I turn ideas into impactful visuals.

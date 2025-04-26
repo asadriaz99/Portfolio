@@ -4,6 +4,7 @@ import { Link } from "react-scroll"; // Importing the Link component from react-
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,8 +36,22 @@ const Navbar = () => {
           </a>
         </div>
 
+        {/* Hamburger Menu for Small Screens */}
+        <div className="lg:hidden">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className={`text-white ${isScrolled ? "text-black" : "text-white"}`}
+          >
+            <i className={`fa ${isMenuOpen ? "fa-times" : "fa-bars"}`} />
+          </button>
+        </div>
+
         {/* Navigation Links */}
-        <div className="flex ml-auto space-x-6">
+        <div
+          className={`flex ml-auto space-x-6 lg:flex ${
+            isMenuOpen ? "flex-col mt-4" : "hidden"
+          } lg:flex-row lg:space-x-6`}
+        >
           <Link
             to="about"
             smooth={true}
@@ -80,8 +95,8 @@ const Navbar = () => {
         </div>
 
         {/* Social Media Icons */}
-        <div className="flex space-x-4">
-          {[
+        <div className="hidden lg:flex space-x-4">
+          {[ 
             { href: "https://twitter.com", icon: "FaTwitter" },
             { href: "https://github.com", icon: "FaGithub" },
             { href: "https://linkedin.com", icon: "FaLinkedin" },

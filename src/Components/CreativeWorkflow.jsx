@@ -31,10 +31,10 @@ function CreativeWorkflow() {
       initial="hidden"
       animate="visible"
     >
-      <div className="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-start gap-16 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 flex flex-col lg:flex-row items-start gap-12 sm:gap-16 relative z-10">
         
         {/* Left Heading Section */}
-        <div className="lg:w-1/3 w-full">
+        <div className="lg:w-1/3 w-full px-10 mb-10 lg:mb-0">
           <motion.div 
             className="inline-flex items-center mb-4"
             initial={{ opacity: 0, y: -20 }}
@@ -42,11 +42,11 @@ function CreativeWorkflow() {
             transition={{ duration: 0.5 }}
           >
             <div className="w-3 h-3 bg-pink-500 rounded-full mr-2"></div>
-            <span className="text-sm font-medium">MY PROCESS</span>
+            <span className="text-sm sm:text-base font-medium">MY PROCESS</span>
           </motion.div>
 
           <motion.h1 
-            className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent animate-pulse"
+            className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent animate-pulse leading-tight"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
@@ -57,7 +57,7 @@ function CreativeWorkflow() {
         </div>
 
         {/* Right Workflow Steps */}
-        <div className="lg:w-2/3 w-full space-y-12">
+        <div className="lg:w-2/3 w-full space-y-8 sm:space-y-12">
           {workflowSteps.map((step, index) => (
             <motion.div
               key={index}
@@ -65,8 +65,12 @@ function CreativeWorkflow() {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <h2 className="text-2xl font-semibold mb-2">{index + 1}. {step.title}</h2>
-              <p className="text-white max-w-3xl">{step.description}</p>
+              <h2 className="text-xl sm:text-2xl font-semibold mb-2">
+                {index + 1}. {step.title}
+              </h2>
+              <p className="text-sm sm:text-base text-white max-w-3xl">
+                {step.description}
+              </p>
             </motion.div>
           ))}
         </div>

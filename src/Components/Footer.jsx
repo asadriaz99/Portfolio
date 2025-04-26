@@ -25,12 +25,13 @@ const FooterPage = () => {
   return (
     <div>
       <footer className="bg-purple-500 text-white py-10">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-6">
+
           {/* Divider */}
           <div className="w-32 h-px mx-auto bg-gradient-to-r from-transparent via-purple-500 to-transparent mb-6"></div>
 
           {/* Call to Action */}
-          <p className="text-lg mb-6">
+          <p className="text-lg mb-6 text-center">
             Ready to collaborate? Let's create something amazing together!
           </p>
 
@@ -52,12 +53,12 @@ const FooterPage = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex justify-center space-x-8 mb-6 text-sm">
+          <div className="flex justify-center flex-wrap space-x-8 mb-6 text-sm text-center">
             <Link
               to="about"
               smooth={true}
               duration={500}
-              className="hover:text-purple-400 transition-colors cursor-pointer"
+              className="hover:text-purple-400 transition-colors cursor-pointer mb-2 sm:mb-0"
             >
               About
             </Link>
@@ -65,7 +66,7 @@ const FooterPage = () => {
               to="skills"
               smooth={true}
               duration={500}
-              className="hover:text-purple-400 transition-colors cursor-pointer"
+              className="hover:text-purple-400 transition-colors cursor-pointer mb-2 sm:mb-0"
             >
               Skills
             </Link>
@@ -73,7 +74,7 @@ const FooterPage = () => {
               to="projects"
               smooth={true}
               duration={500}
-              className="hover:text-purple-400 transition-colors cursor-pointer"
+              className="hover:text-purple-400 transition-colors cursor-pointer mb-2 sm:mb-0"
             >
               Projects
             </Link>
@@ -81,14 +82,14 @@ const FooterPage = () => {
               to="contact"
               smooth={true}
               duration={500}
-              className="hover:text-purple-400 transition-colors cursor-pointer"
+              className="hover:text-purple-400 transition-colors cursor-pointer mb-2 sm:mb-0"
             >
               Contact
             </Link>
           </div>
 
           {/* Copyright */}
-          <p className="text-xs text-white">
+          <p className="text-xs text-white text-center">
             &copy; {new Date().getFullYear()} Asad Riaz 99. All Rights Reserved.
           </p>
         </div>
