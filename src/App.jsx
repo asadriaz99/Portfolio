@@ -5,10 +5,11 @@ import Navbar from "./Components/Navbar"
 import ProjectsSection from "./Components/Projects"
 import SkillsPage from "./Components/Skills"
 import WhyWorkWithMe from "./Components/WhyWorkWithMe"
-import AccentBackground from "./Components/AccentBackground"
 import CreativeWorkflow from "./Components/CreativeWorkflow"
 import MyJourney from "./Components/MyJourney"
 import GetInTouch from "./Components/GetInTouch"
+import AccentBackground from "./Components/AccentBackground"
+
 
 
 function App() {

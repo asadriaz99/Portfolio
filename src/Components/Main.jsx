@@ -74,7 +74,7 @@ export default function Main() {
         </motion.div>
 
         {/* Updated Animated Image Section */}
-        <motion.div variants={imageVariants} className="md:pl-48">
+        <motion.div variants={imageVariants} className="md:pl-48 mt-10">
           <motion.img
             src={Img}
             alt="Profile"
